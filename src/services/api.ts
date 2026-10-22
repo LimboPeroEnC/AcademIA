@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { IndicadorEstudiante } from '@/types/indicadores';
 
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api',
@@ -36,5 +37,17 @@ api.interceptors.response.use(
     return Promise.reject(error);
   }
 );
+
+export async function getIndicadoresEstudiante(search: string): Promise<IndicadorEstudiante | null> {
+  try {
+    const response = await api.get<IndicadorEstudiante>(`/indicadores/estudiante`, {
+      params: { q: search },
+    });
+    return response.data;
+  } catch (error) {
+    console.error('Error al obtener indicadores del estudiante:', error);
+    return null;
+  }
+}
 
 export default api;
