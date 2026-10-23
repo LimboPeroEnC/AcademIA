@@ -1,0 +1,6 @@
+.env
+build/
+.vs/
+*.exe
+*.obj
+*.pdb
