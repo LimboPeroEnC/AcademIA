@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Interfaz del módulo de gestión de estudiantes del Sistema Académico." name="description"/>
+<title>Modificar datos del estudiante | Sistema Académico</title>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="layout">
+<aside aria-label="Menú lateral" class="sidebar">
+<a aria-label="Ir al inicio de Gestión de estudiantes" class="brand" href="index.html">
+<span class="brand-icon"><svg aria-hidden="true" class="icon" fill="none" height="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg"><path d="m2 10 10-6 10 6-10 6-10-6Z"></path><path d="M6 12v6c4 3 8 3 12 0v-6"></path><path d="M22 10v7"></path></svg></span>
+<span class="brand-copy"><strong>Sistema Académico</strong><small>Gestión institucional</small></span>
+</a>
+<div class="nav-group-label">MÓDULO DE ESTUDIANTES</div>
+<nav aria-label="Secciones de estudiantes" class="side-nav"><a class="nav-link" href="index.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg> <span>Resumen</span></a>
+<a class="nav-link" href="registrar.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M19 8v6m-3-3h6"></path></svg> <span>Registrar estudiante</span></a>
+<a class="nav-link" href="buscar.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg> <span>Buscar estudiantes</span></a>
+<a aria-current="page" class="nav-link is-active" href="modificar.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L9 17l-4 1 1-4Z"></path></svg> <span>Modificar datos</span></a>
+<a class="nav-link" href="historial.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg> <span>Historial de estados</span></a><a class="nav-link" href="asignaturas.html"><span class="nav-emoji">▤</span><span>Asignaturas · AC-53</span></a>
+<a class="nav-link" href="malla.html"><span class="nav-emoji">▦</span><span>Malla curricular · AC-57</span></a>
+<a class="nav-link" href="asociar-plan.html"><span class="nav-emoji">◎</span><span>Asignar carrera/plan · AC-48</span></a>
+<a class="nav-link" href="estado.html"><span class="nav-emoji">⇄</span><span>Activar/desactivar · AC-47</span></a><a class="nav-link" href="facultades.html"><span class="nav-emoji">▣</span><span>Facultades · AC-50</span></a><a class="nav-link" href="carreras.html"><span class="nav-emoji">▰</span><span>Carreras · AC-51</span></a><a class="nav-link" href="planes.html"><span class="nav-emoji">▤</span><span>Planes · AC-52</span></a><a class="nav-link" href="asociar-asignaturas.html"><span class="nav-emoji">▦</span><span>Asociación de ramos · AC-55</span></a><a class="nav-link" href="prerrequisitos.html"><span class="nav-emoji">◉</span><span>Prerrequisitos · AC-54</span></a><a class="nav-link" href="creditos.html"><span class="nav-emoji">◈</span><span>Créditos · AC-56</span></a><a class="nav-link" href="ficha.html"><span class="nav-emoji">▧</span><span>Ficha académica · AC-45</span></a></nav>
+<div class="sidebar-footer">
+<div class="environment-note"><svg aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"></path></svg><div><strong>PostgreSQL</strong><small>Consultando conexión</small></div></div>
+<p>Integración local<br/>C++ + PostgreSQL</p>
+</div>
+</aside>
+<div class="content-shell">
+<header class="topbar">
+<div class="topbar-crumb"><a href="index.html">Sistema académico</a><svg aria-hidden="true" class="icon" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg><span>Estudiantes</span></div>
+<div class="topbar-right"><span class="prototype-pill"><svg aria-hidden="true" class="icon" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4m0-4h.01"></path></svg> API C++ local</span><span aria-label="Perfil de usuario de demostración" class="user-avatar">SA</span></div>
+</header>
+<main class="main-content" id="contenido">
+<div class="page-heading"><div><p class="eyebrow">AC-46 · ACTUALIZACIÓN</p><h1>Modificar datos del estudiante</h1><p class="page-lead">Localiza un registro y prepara los cambios que deseas realizar.</p></div></div>
+<section class="surface-panel search-panel"><div class="panel-title-block"><h2>Localizar estudiante</h2><p>Primero busca el registro que deseas modificar mediante su RUT.</p></div><form aria-label="Buscar estudiante a modificar"><div class="lookup-group"><div class="field"><label for="rut-editar">RUT del estudiante</label><input id="rut-editar" maxlength="10" name="rut" placeholder="Ej. 11111111-1"/></div><button class="btn btn-primary" type="button"><svg aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg> Cargar datos</button></div></form></section>
+<section class="surface-panel form-card"><div class="form-section-heading"><span class="form-section-icon"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L9 17l-4 1 1-4Z"></path></svg></span><div><h2>Actualizar información</h2><p>Los datos se cargan desde PostgreSQL al consultar el RUT.</p></div></div>
+<div class="inline-warning"><svg aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4m0-4h.01"></path></svg> Primero busca por RUT. El estado se modifica separadamente con motivo y responsable.</div>
+<form aria-label="Formulario para actualizar estudiantes"><div class="form-grid cols-2">
+<div class="field"><label for="mod-nombres">Nombres</label><input id="mod-nombres" maxlength="100" name="nombres" placeholder="Nombres actuales"/></div>
+<div class="field"><label for="mod-apellido-p">Apellido paterno</label><input id="mod-apellido-p" maxlength="100" name="apellido_paterno" placeholder="Apellido paterno"/></div>
+<div class="field"><label for="mod-apellido-m">Apellido materno</label><input id="mod-apellido-m" maxlength="100" name="apellido_materno" placeholder="Apellido materno"/></div>
+<div class="field"><label for="mod-correo">Correo institucional</label><input id="mod-correo" maxlength="100" name="correo_institucional" placeholder="estudiante@institucion.cl" type="email"/></div>
+<div class="field"><label for="mod-direccion">Dirección de domicilio</label><input id="mod-direccion" maxlength="100" name="direccion_domicilio" placeholder="Dirección actual"/></div>
+<div class="field"><label for="mod-comuna">Comuna de residencia</label><input id="mod-comuna" maxlength="100" name="comuna_residencia" placeholder="Comuna actual"/></div>
+<div class="field"><label for="mod-carrera">Carrera</label><select id="mod-carrera" name="id_carrera"><option value="">Selecciona una carrera</option></select></div>
+<div class="field"><label for="mod-estado">Estado</label><select id="mod-estado" name="estado"><option value="">Selecciona un estado</option><option value="Activo">Activo</option><option value="Inactivo">Inactivo</option></select></div>
+<div class="field"><label for="mod-genero">Género</label><input id="mod-genero" maxlength="100" name="genero" placeholder="Género registrado"/></div>
+<div class="field"><label for="mod-ingreso">Fecha de ingreso</label><input id="mod-ingreso" name="anio_ingreso" type="date"/></div>
+<div class="field"><label for="mod-nacimiento">Fecha de nacimiento</label><input id="mod-nacimiento" name="fecha_nacimiento" type="date"/></div>
+<div class="field"><label for="mod-usuario">ID de usuario asociado</label><input id="mod-usuario" maxlength="100" name="id_usuario" placeholder="Ej. USR001"/></div>
+</div><div class="form-actions within-card"><a class="btn btn-outline" href="buscar.html">Volver a búsqueda</a><button class="btn btn-primary" type="button"><svg aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="m20 6-11 11-5-5"></path></svg> Guardar cambios</button></div><p class="form-disclaimer">Este formulario actualiza los datos de PostgreSQL, excepto el RUT y el estado.</p></form></section>
+<section class="surface-panel form-card"><div class="form-section-heading"><div><h2>Cambiar estado del estudiante</h2><p>Los cambios de estado se registrarán en el historial.</p></div></div>
+<form class="form-layout" id="form-cambiar-estado">
+<div class="form-grid cols-2">
+<div class="field"><label for="nuevo-estado">Nuevo estado</label><select id="nuevo-estado" name="estado" required=""><option value="Activo">Activo</option><option value="Inactivo">Inactivo</option></select></div>
+<div class="field"><label for="motivo">Motivo del cambio</label><input id="motivo" maxlength="500" name="motivo" placeholder="Ej. Solicitud de suspensión" required=""/></div>
+<div class="field"><label for="responsable">Responsable (identificador)</label><input id="responsable" maxlength="100" name="usuario_responsable" placeholder="Ej. admin_local" required=""/></div>
+</div><div class="form-actions within-card"><button class="btn btn-primary" type="submit">Registrar cambio de estado</button></div>
+</form></section>
+<footer class="page-footer"><span>Gestión de estudiantes · Sistema Académico</span><span>Backend C++ y PostgreSQL local</span></footer>
+</main>
+</div>
+</div>
+<script defer="" src="js/estudiantes.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Interfaz del módulo de gestión de estudiantes del Sistema Académico." name="description"/>
+<title>Activar / desactivar estudiantes | Sistema Académico</title>
+<link href="css/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="layout">
+<aside aria-label="Menú lateral" class="sidebar">
+<a aria-label="Ir al inicio de Gestión de estudiantes" class="brand" href="index.html">
+<span class="brand-icon"><svg aria-hidden="true" class="icon" fill="none" height="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="25" xmlns="http://www.w3.org/2000/svg"><path d="m2 10 10-6 10 6-10 6-10-6Z"></path><path d="M6 12v6c4 3 8 3 12 0v-6"></path><path d="M22 10v7"></path></svg></span>
+<span class="brand-copy"><strong>Sistema Académico</strong><small>Gestión institucional</small></span>
+</a>
+<div class="nav-group-label">MÓDULO DE ESTUDIANTES</div>
+<nav aria-label="Secciones de estudiantes" class="side-nav"><a class="nav-link" href="index.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect></svg> <span>Resumen</span></a>
+<a class="nav-link" href="registrar.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M19 8v6m-3-3h6"></path></svg> <span>Registrar estudiante</span></a>
+<a class="nav-link" href="buscar.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg> <span>Buscar estudiantes</span></a>
+<a class="nav-link" href="modificar.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L9 17l-4 1 1-4Z"></path></svg> <span>Modificar datos</span></a>
+<a class="nav-link" href="historial.html"><svg aria-hidden="true" class="icon" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg> <span>Historial de estados</span></a><a class="nav-link" href="asignaturas.html"><span class="nav-emoji">▤</span><span>Asignaturas · AC-53</span></a>
+<a class="nav-link" href="malla.html"><span class="nav-emoji">▦</span><span>Malla curricular · AC-57</span></a>
+<a class="nav-link" href="asociar-plan.html"><span class="nav-emoji">◎</span><span>Asignar carrera/plan · AC-48</span></a>
+<a aria-current="page" class="nav-link is-active" href="estado.html"><span class="nav-emoji">⇄</span><span>Activar/desactivar · AC-47</span></a><a class="nav-link" href="facultades.html"><span class="nav-emoji">▣</span><span>Facultades · AC-50</span></a><a class="nav-link" href="carreras.html"><span class="nav-emoji">▰</span><span>Carreras · AC-51</span></a><a class="nav-link" href="planes.html"><span class="nav-emoji">▤</span><span>Planes · AC-52</span></a><a class="nav-link" href="asociar-asignaturas.html"><span class="nav-emoji">▦</span><span>Asociación de ramos · AC-55</span></a><a class="nav-link" href="prerrequisitos.html"><span class="nav-emoji">◉</span><span>Prerrequisitos · AC-54</span></a><a class="nav-link" href="creditos.html"><span class="nav-emoji">◈</span><span>Créditos · AC-56</span></a><a class="nav-link" href="ficha.html"><span class="nav-emoji">▧</span><span>Ficha académica · AC-45</span></a></nav>
+<div class="sidebar-footer">
+<div class="environment-note"><svg aria-hidden="true" class="icon" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"></path></svg><div><strong>PostgreSQL</strong><small>Consultando conexión</small></div></div>
+<p>Integración local<br/>C++ + PostgreSQL</p>
+</div>
+</aside>
+<div class="content-shell">
+<header class="topbar">
+<div class="topbar-crumb"><a href="index.html">Sistema académico</a><svg aria-hidden="true" class="icon" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><path d="m9 18 6-6-6-6"></path></svg><span>Estudiantes</span></div>
+<div class="topbar-right"><span class="prototype-pill"><svg aria-hidden="true" class="icon" fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4m0-4h.01"></path></svg> API C++ local</span><span aria-label="Perfil de usuario de demostración" class="user-avatar">SA</span></div>
+</header>
+<main class="main-content" id="contenido">
+<div class="page-heading"><div><p class="eyebrow">AC-47 · EN CURSO</p><h1>Activar / desactivar estudiantes</h1><p class="page-lead">Gestiona el estado institucional con motivo, responsable e historial.</p></div></div>
+<div class="tip-bar">Entorno local de pruebas · Los cambios se guardan en PostgreSQL. Autenticación y permisos aún pendientes para producción.</div>
+<section class="surface-panel academic-panel">
+<form class="academic-inline" id="buscar-estado"><div class="field"><label for="estado-rut">RUT del estudiante</label><input id="estado-rut" maxlength="10" placeholder="11111111-1" required=""/></div><button class="btn btn-primary" type="submit">Cargar estudiante</button></form>
+<div class="academic-help" id="estado-resumen">Selecciona un estudiante para consultar su estado actual.</div>
+</section>
+<section class="surface-panel academic-panel">
+<div class="panel-title-block"><h2>Registrar cambio de estado</h2><p>El cambio se almacena en la tabla historial_estado_estudiante.</p></div>
+<form class="form-grid cols-2" id="form-estado">
+<div class="field"><label for="estado-nuevo">Nuevo estado</label><select id="estado-nuevo" name="estado" required=""><option value="Activo">Activo</option><option value="Inactivo">Inactivo</option></select></div>
+<div class="field"><label for="estado-responsable">Responsable</label><input id="estado-responsable" maxlength="100" name="usuario_responsable" placeholder="Identificador de prueba" required=""/></div>
+<div class="field span-2"><label for="estado-motivo">Motivo</label><textarea id="estado-motivo" maxlength="500" name="motivo" placeholder="Indicar motivo del cambio" required="" rows="3"></textarea></div>
+<div class="form-actions span-2"><button class="btn btn-primary" type="submit">Confirmar cambio</button></div>
+</form>
+<p class="academic-help">En esta versión de desarrollo el nombre del responsable se ingresa manualmente. No hay autenticación integrada.</p>
+</section>
+<section class="surface-panel academic-panel"><div class="panel-title-block"><h2>Historial de cambios</h2><p>Registros posteriores a la creación de la tabla de historial.</p></div>
+<div class="table-scroll"><table class="data-table"><thead><tr><th>Fecha</th><th>Anterior</th><th>Nuevo</th><th>Motivo</th><th>Responsable</th></tr></thead><tbody id="tabla-estado-historial"></tbody></table></div>
+</section>
+<footer class="page-footer"><span>Sistema académico · AC-47</span><a href="index.html">Volver al panel principal</a></footer>
+</main>
+</div>
+</div>
+<script defer="" src="js/academico.js"></script>
+</body>
+</html>
